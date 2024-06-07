@@ -14,18 +14,19 @@ import (
 	"github.com/xtls/xray-core/core"
 	"github.com/xtls/xray-core/infra/conf"
 
-	"github.com/XrayR-project/XrayR/api"
-	"github.com/XrayR-project/XrayR/api/bunpanel"
-	"github.com/XrayR-project/XrayR/api/gov2panel"
-	"github.com/XrayR-project/XrayR/api/newV2board"
-	"github.com/XrayR-project/XrayR/api/pmpanel"
-	"github.com/XrayR-project/XrayR/api/proxypanel"
-	"github.com/XrayR-project/XrayR/api/sspanel"
-	"github.com/XrayR-project/XrayR/api/v2raysocks"
-	"github.com/XrayR-project/XrayR/app/mydispatcher"
-	_ "github.com/XrayR-project/XrayR/cmd/distro/all"
-	"github.com/XrayR-project/XrayR/service"
-	"github.com/XrayR-project/XrayR/service/controller"
+	"github.com/jare-abc/XrayR/api"
+	"github.com/jare-abc/XrayR/api/bunpanel"
+	"github.com/jare-abc/XrayR/api/gov2panel"
+	"github.com/jare-abc/XrayR/api/newV2board"
+	"github.com/jare-abc/XrayR/api/pmpanel"
+	"github.com/jare-abc/XrayR/api/proxypanel"
+	"github.com/jare-abc/XrayR/api/sspanel"
+	"github.com/jare-abc/XrayR/api/v2raysocks"
+	"github.com/jare-abc/XrayR/app/mydispatcher"
+	_ "github.com/jare-abc/XrayR/cmd/distro/all"
+	"github.com/jare-abc/XrayR/service"
+	"github.com/jare-abc/XrayR/service/controller"
+	"github.com/jare-abc/XrayR/api/earthSurface"
 )
 
 // Panel Structure
@@ -188,6 +189,8 @@ func (p *Panel) Start() {
 			apiClient = gov2panel.New(nodeConfig.ApiConfig)
 		case "BunPanel":
 			apiClient = bunpanel.New(nodeConfig.ApiConfig)
+		case "EarthSurface":
+			apiClient = earthSurface.New(nodeConfig.ApiConfig)
 		default:
 			log.Panicf("Unsupport panel type: %s", nodeConfig.PanelType)
 		}
