@@ -13,7 +13,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/XrayR-project/XrayR/api"
+	"github.com/jare-abc/XrayR/api"
 
 	"github.com/bitly/go-simplejson"
 	"github.com/go-resty/resty/v2"

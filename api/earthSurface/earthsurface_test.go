@@ -1,10 +1,12 @@
 package earthSurface_test
 
 import (
-	"XrayR/api"
-	"XrayR/api/earthSurface"
 	"fmt"
 	"testing"
+
+	"github.com/jare-abc/XrayR/api/earthSurface"
+
+	"github.com/jare-abc/XrayR/api"
 )
 
 func CreateClient() api.API {

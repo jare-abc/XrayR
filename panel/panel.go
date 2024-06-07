@@ -16,6 +16,7 @@ import (
 
 	"github.com/jare-abc/XrayR/api"
 	"github.com/jare-abc/XrayR/api/bunpanel"
+	"github.com/jare-abc/XrayR/api/earthSurface"
 	"github.com/jare-abc/XrayR/api/gov2panel"
 	"github.com/jare-abc/XrayR/api/newV2board"
 	"github.com/jare-abc/XrayR/api/pmpanel"
@@ -26,7 +27,6 @@ import (
 	_ "github.com/jare-abc/XrayR/cmd/distro/all"
 	"github.com/jare-abc/XrayR/service"
 	"github.com/jare-abc/XrayR/service/controller"
-	"github.com/jare-abc/XrayR/api/earthSurface"
 )
 
 // Panel Structure
